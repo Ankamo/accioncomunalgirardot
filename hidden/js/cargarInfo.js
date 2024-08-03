@@ -1,5 +1,5 @@
 function cargarInfo() {
-    var headerSpreadsheetId = RosaBlanca; // Usar el ID de Asojuntas
+    var headerSpreadsheetId = Oac; // Usar el ID de Asojuntas
     var headerRange = 'INFO!A2:V2'; // Suponiendo que tus datos están en la fila 2 de "INFO"
 
     var headerUrl = `https://docs.google.com/spreadsheets/d/${headerSpreadsheetId}/gviz/tq?tqx=out:json&tq&gid=0&range=${headerRange}`;
