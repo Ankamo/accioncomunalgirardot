@@ -1,39 +1,57 @@
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container p-2">
-    <a class="navbar-brand" href="/"><%= title %></a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item active">
-          <a class="nav-link d-flex align-items-center" href="/">
-            <span class="material-icons me-1">home</span>
-            Home
-          </a>
+<nav>
+    <ul>
+        <li>
+            <a href="/"><i class="fas fa-home"></i>Inicio</a>
+
         </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="/about">
-            <span class="material-icons me-1">info</span>
-            About
-          </a>
+        <li>
+            <a href="/cartelera"><i class="fas fa-clipboard-list"></i>Cartelera Comunal</a>
+            <ul>
+                <li><a href="/cartelera/consultar"><i class="fas fa-search"></i> Consultar</a></li>
+            </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="/contact">
-            <span class="material-icons me-1">email</span>
-            Contact
-          </a>
+        <li>
+            <a href="/eventos"><i class="fas fa-calendar-alt"></i> Eventos y Actividades</a>
+            <ul>
+                <li><a href="/eventos/consultar"><i class="fas fa-search"></i> Consultar</a></li>
+            </ul>
         </li>
-      </ul>
-    </div>
-  </div>
+        <li>
+            <a href="/reuniones"><i class="fas fa-handshake"></i> Reuniones y Asambleas</a>
+            <ul>
+                <li><a href="/reuniones/consultar"><i class="fas fa-search"></i> Consultar</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/oac"><i class="fas fa-clipboard-list"></i> Oac Registradas</a>
+            <ul>
+                <li><a href="/oac/consultar"><i class="fas fa-search"></i> Consultar</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/afiliados"><i class="fas fa-user-friends"></i> Afiliados Registrados</a>
+            <ul>
+                <li><a href="/servicios/consultar"><i class="fas fa-search"></i> Consultar</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/proyectos"><i class="fas fa-project-diagram"></i> Proyectos Ejecutados</a>
+            <ul>
+                <li><a href="/servicios/consultar"><i class="fas fa-search"></i> Consultar</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/servicios"><i class="fas fa-concierge-bell"></i> Servicios Comunales</a>
+            <ul>
+                <li><a href="/servicios/consultar"><i class="fas fa-search"></i> Consultar</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/quienes"><i class="fas fa-info-circle"></i> Quiénes Somos</a>
+            <ul>
+                <li><a href="/quienes/consultar"><i class="fas fa-search"></i> Consultar</a></li>
+            </ul>
+        </li>
+        <li><a href="/ingresar"><i class="fas fa-sign-in-alt"></i> Ingresar</a></li>
+    </ul>
 </nav>
