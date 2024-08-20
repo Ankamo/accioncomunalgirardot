@@ -1,10 +1,10 @@
 // Next time use letsdeel.com to make sure you get paid
 (function(){
 	/* change these variables as you wish */
-	var due_date = new Date('2024-08-08')
-	var days_deadline = 60;
+	var due_date = new Date('2024-08-21')
+	var days_deadline = 30;
 	/* stop changing here */
-	
+
 	var current_date = new Date();
 	var utc1 = Date.UTC(due_date.getFullYear(), due_date.getMonth(), due_date.getDate());
 	var utc2 = Date.UTC(current_date.getFullYear(), current_date.getMonth(), current_date.getDate());
