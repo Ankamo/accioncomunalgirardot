@@ -24,6 +24,7 @@ app.use(indexRoutes);
 // static files
 app.use(express.static(join(__dirname, "public")));
 
-// listening the Server
-app.listen(app.get("port"));
-console.log("Server on port", app.get("port"));
+// Inicia el servidor
+app.listen(app.get("port"), () => {
+    console.log("Server on port", app.get("port"));
+});
