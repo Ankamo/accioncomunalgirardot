@@ -12,7 +12,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Configuración
 app.set("port", process.env.PORT || 4000);
-app.set("views", join(__dirname, "views"));
+app.set("views", join(__dirname, "src", "views")); // Ruta correcta al directorio de vistas
 app.set("view engine", "ejs");
 
 // Middlewares
@@ -22,7 +22,7 @@ app.use(morgan("dev"));
 app.use(indexRoutes);
 
 // Archivos estáticos
-app.use(express.static(join(__dirname, "public")));
+app.use(express.static(join(__dirname, "src", "public")));
 
 // Inicia el servidor
 app.listen(app.get("port"), () => {

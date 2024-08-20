@@ -4,7 +4,7 @@ const router = Router();
 
 // Ruta principal
 router.get("/", (req, res) => {
-    res.render("index", { title: "Inicio" });
+    res.render("index");
 });
 
 // Ruta: cartelera 
