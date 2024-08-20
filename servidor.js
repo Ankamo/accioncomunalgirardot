@@ -4,7 +4,7 @@ import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
 // Rutas
-import indexRoutes from "../routes/rutas.js"; // Importa las rutas
+import indexRoutes from "./src/routes/rutas.js"; // Importa las rutas
 
 // Inicializa express
 const app = express();
