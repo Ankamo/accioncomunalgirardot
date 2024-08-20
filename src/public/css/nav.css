@@ -1,65 +1,63 @@
-/* Nav */
-
 /* Estilos para el menú de navegación */
 nav {
-  background-color: #1a1a1a;
-  padding: 10px;
-  margin: 0; /* Alinea el menú al borde izquierdo */
-  width: fit-content; /* Ajusta el ancho al contenido */
+  background-color: #1e1e1e;
+  /* Fondo del nav */
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: block; /* Para disposición vertical */
+  display: inline-block;
 }
 
 nav ul li {
+  display: inline;
+  margin: 0;
   position: relative;
 }
 
 nav ul li a {
-  display: block;
-  color: white;
+  color: #e0e0e0;
   text-decoration: none;
-  padding: 10px 15px;
-  transition: background-color 0.3s;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
   background-color: #555;
+  color: #fff;
 }
 
 nav ul li ul {
   display: none;
   position: absolute;
-  top: 0;
-  left: 100%; /* Desplaza los submenús a la derecha del elemento principal */
-  background-color: #333;
+  top: 100%;
+  left: 0;
+  background-color: #222;
   padding: 0;
-  margin: 0;
   list-style: none;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 nav ul li:hover ul {
   display: block;
 }
 
+nav ul li ul li {
+  width: 200px;
+}
+
 nav ul li ul li a {
   padding: 10px 15px;
-  width: 200px; /* Ancho de los submenús */
 }
 
 nav ul li ul li a:hover {
-  background-color: #555;
-}
-
-nav ul li ul li ul {
-  left: 100%;
-  top: 0;
-}
-
-nav ul li a i {
-  margin-right: 8px; /* Espacio entre el icono y el texto */
+  background-color: #444;
 }

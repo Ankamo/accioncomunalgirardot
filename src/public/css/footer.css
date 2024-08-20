@@ -1,49 +1,41 @@
-/* Estilos para el cuerpo y el contenedor principal */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  main {
-    flex: 1; /* Hace que el contenido principal ocupe todo el espacio disponible */
-  }
-  
-  /* Estilos para el footer */
-  footer {
-    background-color: #111; /* Fondo del footer */
-    color: #fff; /* Texto blanco */
-    padding: 0px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%; /* Asegura que el footer ocupe todo el ancho de la página */
-  }
-  
-  footer div {
-    flex: 1;
-    text-align: center;
-  }
-  
-  p {
-    font-size: 16px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  img {
-    max-width: 70px;
-    margin-right: 70px;
-    margin: 0;
-    padding: 0;
-    max-height: 70px;
-  }
-  
+/* Estilos para el footer */
+footer {
+  background-color: #1e1e1e; /* Fondo del footer */
+  color: #fff; /* Texto blanco */
+  padding: 5px; /* Espaciado interno arriba y abajo */
+  margin: 0;
+  display:flex;
+  justify-content: space-around; /* Espacio entre los items */
+  align-items: center; /* Centra los items verticalmente */
+  text-align: center; /* Centra el texto */
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total */
+}
+
+/* Estilos para las secciones dentro del footer */
+footer .info,
+footer .logos,
+footer .propiedad {
+  flex: 1 1 200px; /* Ajusta el tamaño mínimo y crecimiento */
+  text-align: center;
+  margin: 0; /* Margen para separarlos */
+}
+
+/* Estilos para los íconos y texto en las secciones */
+footer p {
+  font-size: 16px;
+  margin: 0; /* Espaciado vertical entre los párrafos */
+}
+
+footer i {
+  font-size: 16px;
+  margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+/* Estilos para las imágenes */
+footer .img-fluid {
+  max-width: 70px;
+  max-height: 70px; /* Tamaño máximo de las imágenes */
+  width: auto; /* Ajusta automáticamente el ancho */
+  height: auto; /* Ajusta automáticamente la altura */
+  margin: 0; /* Espaciado alrededor de las imágenes */
+}
