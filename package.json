@@ -4,8 +4,8 @@
   "main": "servidor.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/servidor.js",
-    "start": "node src/servidor.js"
+    "dev": "nodemon servidor.js",
+    "start": "node servidor.js"
   },
   "keywords": [],
   "author": "",
