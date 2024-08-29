@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    
     // Cargar el contenido del head.html
     fetch("/html/head.html")
         .then((response) => response.text())
