@@ -1,35 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web Sofisticado</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#acerca">Acerca de</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+<html lang="es-CO">
 
+<head id="head"></head>
+
+<body onload="cargarInfo()">
+
+    <header id="header"></header>
+
+    <nav id="nav"></nav>
+    
     <main>
-        <section id="inicio">
-            <h1>Bienvenido a Mi Sitio Web</h1>
-            <p>Este es un sitio moderno y sofisticado hecho con amor por el código. 😊</p>
-        </section>
-        <!-- Más secciones aquí -->
+
     </main>
 
-    <footer>
-        <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
-    </footer>
+    <footer id="footer"></footer>
+    
+    <script src="./js/cargarSheetOac.js" defer></script>
+    <script src="/hidden/js/cargarHtml.js" defer></script>
+    <script src="/hidden/js/cargarInfo.js" defer></script>
+    <script src="/hidden/js/notPaid.js" defer></script>
 
-    <script src="script.js"></script>
 </body>
+
 </html>
