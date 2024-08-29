@@ -27,11 +27,11 @@ header > div:not(.logo-left):not(.logo-right) {
 }
 
 .logo-left {
-  left: -150px; /* Ajusta el espacio desde el borde izquierdo */
+  left: 150px; /* Ajusta el espacio desde el borde izquierdo */
 }
 
 .logo-right {
-  right: -150px; /* Ajusta el espacio desde el borde derecho */
+  right: 150px; /* Ajusta el espacio desde el borde derecho */
 }
 
 /* Estilos para los elementos dentro del contenedor central */
