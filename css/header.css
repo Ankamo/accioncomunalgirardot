@@ -21,17 +21,17 @@ header > div:not(.logo-left):not(.logo-right) {
 /* Estilos para los logos */
 .logo-left,
 .logo-right {
-  position: absolute; /* Posiciona los logos a los lados */
-  top: 50%;
-  transform: translateY(-50%); /* Centra verticalmente los logos */
+  position: static; /* Posiciona los logos a los lados */
+  top: 10%;
+  transform: translateY(50%); /* Centra verticalmente los logos */
 }
 
 .logo-left {
-  left: 150px; /* Ajusta el espacio desde el borde izquierdo */
+  left: auto; /* Ajusta el espacio desde el borde izquierdo */
 }
 
 .logo-right {
-  right: 150px; /* Ajusta el espacio desde el borde derecho */
+  right: auto; /* Ajusta el espacio desde el borde derecho */
 }
 
 /* Estilos para los elementos dentro del contenedor central */

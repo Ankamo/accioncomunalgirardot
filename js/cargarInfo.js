@@ -1,8 +1,6 @@
-import { rosaBlanca } from './cargarSheetOac.js';
-
 function cargarInfo() {
     // Importando la variable Oac desde cargarSheetOac.js
-    var headerSpreadsheetId = comunales; // Usar el ID de Asojuntas
+    var headerSpreadsheetId = '1dbd-zczXkVDbnGTVZ9a7NBwB3I7XnP9FXZORNJ1nSwY'; // Usar el ID de Asojuntas
     var headerRange = 'INFO!A2:V2'; // Suponiendo que tus datos están en la fila 2 de "INFO"
 
     var headerUrl = `https://docs.google.com/spreadsheets/d/${headerSpreadsheetId}/gviz/tq?tqx=out:json&tq&gid=0&range=${headerRange}`;
