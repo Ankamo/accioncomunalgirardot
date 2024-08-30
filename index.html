@@ -18,75 +18,22 @@
     <link rel="stylesheet" href="/css/footer.css">
 </head>
 
-<body>
+<body onload="cargarInfo()">
 
-    <header>
-        <div class="logo-left">
-            <img src="" id="header-logoOac" alt="Logo OAC" class="img-fluid">
-        </div>
-        <div class="info">
-            <h1 id="header-titulo">Junta de Acción Comunal ....</h1>
-            <p id="header-nit">NIT:</p>
-            <p id="header-ruc">RUC:</p>
-            <p id="header-pj">PJ:</p>
-            <p id="header-expedido">Expedido por:</p>
-            <p id="header-ubicacion">Girardot, Cundinamarca</p>
-        </div>
-        <div class="logo-right">
-            <img src="" id="header-logoComunal" alt="Logo Acción Comunal" class="img-fluid">
-        </div>
-    </header>
+    <header id="header"></header>
 
-    <nav>
-        <ul>
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/cartelera-comunal.html">Cartelera Comunal</a></li>
-            <li><a href="/eventos-y-actividades.html">Eventos y Actividades</a></li>
-            <li><a href="/reuniones-y-asambleas.html">Reuniones y Asambleas</a></li>
-            <li><a href="/proyectos-comunales.html">Proyectos</a></li>
-            <li><a href="/servicios-comunales.html">Servicios Comunales</a></li>
-            <li><a href="/oac-afiliadas.html">Afiliados</a></li>
-            <li>
-                <a href="/sobre-nosotros.html">Sobre Nosotros</a>
-                <ul>
-                    <li><a href="">Ubicación</a></li>
-                    <li><a href="">Documentación Legal</a></li>
-
-                </ul>
-            </li>
-            <li><a href="/ingresar.html">Ingresar</a></li>
-        </ul>
-    </nav>
-
+    <nav id="nav"></nav>
 
     <main>
         <h1>Bienvenido a la Junta de Acción Comunal</h1>
     </main>
 
-    <footer>
-        <div class="info">
-            <p><i class="fas fa-map-marker-alt" id="footer-direccion"></i></p>
-            <p><i class="fas fa-home" id="footer-barrio"></i></p>
-            <p><i class="fas fa-envelope" id="footer-correo"></i></p>
-            <p><i class="fas fa-phone" id="footer-telefono"></i></p>
-        </div>
-        <div class="logos">
-            <img src="" id="footer-escudoPais" alt="Escudo Colombia" class="img-fluid" style="max-width: 80px;">
-            <img src="" id="footer-escudoDepto" alt="Escudo Depto" class="img-fluid" style="max-width: 80px;">
-            <img src="" id="footer-escudoMunicipio" alt="Escudo Mpio" class="img-fluid" style="max-width: 80px;">
-            <img src="" id="footer-logoIvc" alt="Logo IVC" class="img-fluid" style="max-width: 80px;">
-            <p><i class="fas fa-calendar-alt" id="footer-periodo"></i></p>
-        </div>
-        <div class="propiedad">
-            <p id="footer-creador"></p>  
-            <p><i class="fas fa-laptop-code"></i>Creado y Diseñado Por: Ankamo</p>
-        </div>
-    </footer>  
+    <footer id="footer"></footer> 
 
     <!-- Scripts -->
-    <script src="/js/cargarHtml.js" defer></script>
-    <script src="/js/cargarInfo.js" defer></script>
-    <script src="/js/notPaid.js" defer></script>
+    <script src="/js/cargarHtml.js"></script>
+    <script src="/js/cargarInfo.js"></script>
+    <script src="/js/notPaid.js"></script>
 </body>
 
 </html>

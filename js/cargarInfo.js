@@ -1,63 +1,85 @@
 function cargarInfo() {
-    const headerSpreadsheetId = '1dbd-zczXkVDbnGTVZ9a7NBwB3I7XnP9FXZORNJ1nSwY'; // ID de la hoja de cálculo
-    const headerRange = 'INFO!A2:V2';
-    const headerUrl = `https://docs.google.com/spreadsheets/d/${headerSpreadsheetId}/gviz/tq?tqx=out:json&tq&gid=0&range=${headerRange}`;
+    // Importando la variable Oac desde cargarSheetOac.js
+    var headerSpreadsheetId = '1dJRtbDiIJFAbaMEw50kjdSHOO84kWZt-wXLZow_ILWo'; // Usar el ID de Asojuntas
+    var headerRange = 'INFO!A2:V2'; // Suponiendo que tus datos están en la fila 2 de "INFO"
+
+    var headerUrl = `https://docs.google.com/spreadsheets/d/${headerSpreadsheetId}/gviz/tq?tqx=out:json&tq&gid=0&range=${headerRange}`;
 
     fetch(headerUrl)
         .then(response => response.text())
         .then(data => {
-            const jsonData = JSON.parse(data.substring(47, data.length - 2)).table.rows[0].c;
-            
-            // Mapeo de datos con nombres descriptivos
-            const fields = {
-                logoOac: 'header-logoOac',
-                titulo: 'header-titulo',
-                nit: 'header-nit',
-                ruc: 'header-ruc',
-                pj: 'header-pj',
-                fechaPJ: 'header-fechaPJ',
-                expedidoPor: 'header-expedido',
-                ciudad: 'header-ubicacion',
-                departamento: 'header-departamento',
-                logoComunal: 'header-logoComunal',
-                direccion: 'footer-direccion',
-                barrio: 'footer-barrio',
-                correo: 'footer-correo',
-                telefono: 'footer-telefono',
-                periodo: 'footer-periodo',
-                creador: 'footer-creador',
-                escudoPais: 'footer-escudoPais',
-                escudoDepto: 'footer-escudoDepto',
-                escudoMunicipio: 'footer-escudoMunicipio',
-                logoIvc: 'footer-logoIvc'
-            };
+            var jsonData = JSON.parse(data.substring(47, data.length - 2)).table.rows[0].c;
 
-            // Procesar y asignar los datos al DOM
-            Object.keys(fields).forEach((key, index) => {
-                const element = document.getElementById(fields[key]);
-                if (element) {
-                    if (key.includes('logo') || key.includes('escudo')) {
-                        element.src = jsonData[index] ? jsonData[index].v : '';
-                    } else {
-                        element.innerText = jsonData[index] ? jsonData[index].v : '';
-                    }
-                }
-            });
+            // Mapear los datos de la hoja de cálculo a las variables correspondientes
+            var logoOac = jsonData[0]?.v || 'logoOac';
+            var titulo = jsonData[3]?.v || 'titulo';
+            var nit = jsonData[4]?.v || 'nit';
+            var ruc = jsonData[5]?.v || 'ruc';
+            var pj = jsonData[6]?.v || 'pj';
+            var fechaPJ = jsonData[7]?.v || 'fechaPJ';
+            var expedidoPor = jsonData[8]?.v || 'expedidoPor';
+            var ciudad = jsonData[9]?.v || 'ciudad';
+            var departamento = jsonData[10]?.v || 'departamento';
+            var logoComunal = jsonData[11]?.v || 'logoComunal';
+            var direccion = jsonData[12]?.v || 'direccion';
+            var barrio = jsonData[13]?.v || 'barrio';
+            var correo = jsonData[14]?.v || 'correo';
+            var telefono = jsonData[15]?.v || 'telefono';
+            var periodo = jsonData[16]?.v || 'periodo';
+            var creador = jsonData[17]?.v || 'creador';
+            var escudoPais = jsonData[18]?.v || 'escudoPais';
+            var escudoDepto = jsonData[19]?.v || 'escudoDepto';
+            var escudoMunicipio = jsonData[20]?.v || 'escudoMunicipio';
+            var logoIvc = jsonData[21]?.v || 'logoIvc';
 
-            // Convertir y formatear la fecha PJ
-            const fechaPJ = jsonData[7] ? jsonData[7].v : '';
+            // Convertir fechaPJ en un objeto Date y luego formatear la fecha
             if (typeof fechaPJ === 'string' && fechaPJ.startsWith('Date(')) {
                 const [year, month, day] = fechaPJ.match(/\d+/g).map(Number);
-                const date = new Date(year, month, day);
+                const date = new Date(year, month - 1, day); // Corregido: month - 1
                 const options = { year: 'numeric', month: 'long', day: 'numeric' };
-                const formattedDate = date.toLocaleDateString('es-ES', options);
-                document.getElementById('header-pj').innerText += ` del ${formattedDate}`;
+                fechaPJ = date.toLocaleDateString('es-ES', options);
             }
+
+            // Función auxiliar para actualizar el DOM de manera segura
+            function setElementTextById(id, text) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.innerText = text;
+                }
+            }
+
+            function setElementSrcById(id, src) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.src = src;
+                }
+            }
+
+            // Actualizar el DOM con los datos
+            setElementSrcById('header-logoOac', logoOac);
+            setElementTextById('header-titulo', titulo);
+            setElementTextById('header-titulo1', titulo);
+            setElementTextById('header-nit', 'NIT: ' + nit);
+            setElementTextById('header-ruc', 'RUC: ' + ruc);
+            setElementTextById('header-pj', 'PJ: ' + pj + ' del ' + fechaPJ);
+            setElementTextById('header-expedido', 'Expedido por: ' + expedidoPor);
+            setElementTextById('header-ubicacion', ciudad + ', ' + departamento);
+            setElementSrcById('header-logoComunal', logoComunal);
+            setElementTextById('footer-direccion', 'Dirección: ' + direccion);
+            setElementTextById('footer-barrio', 'Barrio: ' + barrio);
+            setElementTextById('footer-correo', 'Correo: ' + correo);
+            setElementTextById('footer-telefono', 'WhatsApp: ' + telefono);
+            setElementTextById('footer-periodo', 'Periodo Comunal: ' + periodo);
+            setElementTextById('footer-creador', creador);
+            setElementSrcById('footer-escudoPais', escudoPais);
+            setElementSrcById('footer-escudoDepto', escudoDepto);
+            setElementSrcById('footer-escudoMunicipio', escudoMunicipio);
+            setElementSrcById('footer-logoIvc', logoIvc);
         })
         .catch(error => {
-            console.error('Error al obtener los datos desde Google Sheets:', error);
-            alert('No se pudieron cargar los datos del encabezado. Por favor, inténtelo más tarde.');
+            console.error('Error al obtener los datos del encabezado desde Google Sheets: ' + error);
         });
 }
 
+// Llama a la función al cargar la página
 document.addEventListener('DOMContentLoaded', cargarInfo);
