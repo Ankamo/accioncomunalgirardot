@@ -1,16 +1,14 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const PORT = 8000; // Define el puerto en una constante
+const PORT = 8080;
 
 app.use(cors());
 
-// Configuración de la ruta
 app.get("/api/home", (req, res) => {
-    res.json({ message: "Hola a Todos!", people: ["Harry", "Jack", "Barry", "Camilo"] });
+  res.json({ message: "Like this video!", people: ["Arpan", "Jack", "Barry"] });
 });
 
-// Iniciar el servidor
 app.listen(PORT, () => {
-    console.log(`Servidor iniciado en el puerto ${PORT}`);
+  console.log(`Server started on port ${PORT}`);
 });
