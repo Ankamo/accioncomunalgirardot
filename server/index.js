@@ -1,8 +1,14 @@
-const express = require('express');
-const app = express ();
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const PORT = 8080;
 
-app.use("/", (req,res) => {
-    res.send ("Servidor funcional");
+app.use(cors());
+
+app.get("/", (req, res) => {
+    res.json({ message: "Like this video!", people: ["Arpan", "Jack", "Barry"] });
 });
 
-app.listen(5000, console.log("Servidor funcinal en el puerto 5000"));
+app.listen(PORT, () => {
+    console.log(`Server started on port ${PORT}`);
+});
