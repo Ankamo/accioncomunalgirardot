@@ -1,14 +1,8 @@
-const express = require("express");
-const app = express();
-const cors = require("cors");
-const PORT = 8080;
+const express = require('express');
+const app = express ();
 
-app.use(cors());
-
-app.get("/", (req, res) => {
-    res.json({ message: "Like this video!", people: ["Arpan", "Jack", "Barry"] });
+app.use("/", (req,res) => {
+    res.send ("Servidor funcional");
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor funcional en el puerto ${PORT}`);
-});
+app.listen(5000, console.log("Servidor funcinal en el puerto 5000"));
