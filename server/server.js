@@ -6,7 +6,7 @@ const PORT = 8080;
 app.use(cors());
 
 app.get("/api/home", (req, res) => {
-  res.json({ message: "Like this video!", people: ["Arpan", "Jack", "Barry"] });
+  res.json({ message: "Like this video!", people: ["Arpan", "Jack", "Barry", "Camilo"] });
 });
 
 app.listen(PORT, () => {
