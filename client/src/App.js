@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-import Head from './components/Head';
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Footer from './components/Footer';
-import { cargarInfo } from './utils/cargarInfo';
-import { updateOpacity } from './utils/updateOpacity';
+import Head from './components/head.js';
+import Header from './components/header.js';
+import Nav from './components/nav.js';
+import Footer from './components/footer.js';
+import { cargarInfo } from './utils/cargarInfo.js';
+import { updateOpacity } from './utils/notPaid.js';
 
 function App() {
   const [info, setInfo] = useState({});
