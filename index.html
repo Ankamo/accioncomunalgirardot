@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html lang="es-CO">
 
-<head id="head"></head>
+<meta charset="UTF-8" />
+<title id="header-titulo1">Inicio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Favicon -->
+<link rel="shortcut icon" href="/img/accionComunal.png" type="image/x-icon" />
+<!-- Bootstrap 5 CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" />
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap" rel="stylesheet" />
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/css/head.css" />
+<link rel="stylesheet" href="/css/header.css" />
+<link rel="stylesheet" href="/css/nav.css" />
+<link rel="stylesheet" href="/css/footer.css" />
 
 <body onload="cargarInfo()">
 
@@ -48,7 +65,7 @@
     </main>
 
     <footer>
-        <div class="inf">
+        <div class="info">
             <p><i class="fas fa-map-marker-alt" id="footer-direccion"></i></p>
             <p><i class="fas fa-home" id="footer-barrio"></i></p>
             <p><i class="fas fa-envelope" id="footer-correo"></i></p>
@@ -68,6 +85,10 @@
         </div>
     </footer>
 
+    <script src="/js/cargarSheetOac.js" defer></script>
+    <script src="/js/cargarHtml.js" defer></script>
+    <script src="/js/cargarInfo.js" defer></script>
+    <script src="/js/notPaid.js" defer></script>
 </body>
 
 </html>

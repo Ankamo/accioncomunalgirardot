@@ -1,5 +1,3 @@
-import { comunales } from '../../../hidden/js/cargarSheetOac';
-
 function cargarInfo() {
     // Importando la variable Oac desde cargarSheetOac.js
     var headerSpreadsheetId = comunales; // Usar el ID de Asojuntas
