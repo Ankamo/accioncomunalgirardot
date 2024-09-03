@@ -1,4 +1,5 @@
 import React from 'react';
+import './header.css'; // Actualiza la ruta si es necesario
 
 function Header({ info }) {
     return (

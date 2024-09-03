@@ -1,17 +1,28 @@
 import React from 'react';
+import './footer.css'; // Actualiza la ruta si es necesario
+
 
 function Footer({ info }) {
-  return (
-    <footer>
-      <div className="info">
-        <p><FontAwesomeIcon icon={faMapMarkerAlt} /> <span id="footer-direccion">Dirección: {info.direccion}</span></p>
-        <p><FontAwesomeIcon icon={faHome} /> <span id="footer-barrio">Barrio: {info.barrio}</span></p>
-        <p><FontAwesomeIcon icon={faEnvelope} /> <span id="footer-correo">Correo: {info.correo}</span></p>
-        <p><FontAwesomeIcon icon={faPhone} /> <span id="footer-telefono">WhatsApp: {info.telefono}</span></p>
-      </div>
-      <div className="logos">
-        <img src={info.escudoPais} id="footer-escudoPais" alt="Escudo Colombia" className="img-fluid" style={{ maxWidth: '80px' }} />
-        <img src={info.escudoDepto} id="footer-escudoDepto" alt="Escudo Depto" className="img-fluid" style={{ maxWidth: '80px' }} />
-        <img src={info.escudoMunicipio} id="footer-escudoMunicipio" alt="Escudo Municipio" className="img-fluid" style={{ maxWidth: '80px' }} />
-        <img src={info.logoIvc} id="footer-logoIvc" alt="Logo IVC" className="img-fluid" style={{ maxWidth: '80px' }} />
-        <p><FontAwesomeIcon icon={faCalendarAlt} /> <span id="footer-period
+    return (
+        <footer>
+            <div className="footer-content">
+                <div className="footer-logo">
+                    <img id="footer-escudoPais" src={info.escudoPais} alt="Escudo del País" />
+                    <img id="footer-escudoDepto" src={info.escudoDepto} alt="Escudo del Departamento" />
+                    <img id="footer-escudoMunicipio" src={info.escudoMunicipio} alt="Escudo del Municipio" />
+                    <img id="footer-logoIvc" src={info.logoIvc} alt="Logo IVC" />
+                </div>
+                <div className="footer-info">
+                    <p id="footer-direccion">Dirección: {info.direccion}</p>
+                    <p id="footer-barrio">Barrio: {info.barrio}</p>
+                    <p id="footer-correo">Correo: {info.correo}</p>
+                    <p id="footer-telefono">WhatsApp: {info.telefono}</p>
+                    <p id="footer-periodo">Periodo Comunal: {info.periodo}</p>
+                    <p id="footer-creador">Creador: {info.creador}</p>
+                </div>
+            </div>
+        </footer>
+    );
+}
+
+export default Footer;

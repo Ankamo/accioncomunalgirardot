@@ -1,24 +1,20 @@
-// src/App.js
+import React, { useEffect, useState } from 'react';
+import './App.css';  // Asegúrate de que App.css contenga estilos globales si es necesario
 
-import React, { useEffect } from 'react';
-import './App.css';
-import { cargarInfo } from './utils/cargarInfo.js'; // Importa la función cargarInfo
-import { updateOpacity } from './utils/notPaid.js'; // Importa la función updateOpacity
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faHome, faEnvelope, faPhone, faCalendarAlt, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-import Head from './components/head.js';
-import Header from './components/header.js';
-import Nav from './components/nav.js';
-import Footer from './components/footer.js';
-
+import Head from './components/Head';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import Footer from './components/Footer';
+import { cargarInfo } from './utils/cargarInfo';
+import { updateOpacity } from './utils/updateOpacity';
 
 function App() {
-  const [info, setInfo] = useState({}); // Estado para almacenar la información
+  const [info, setInfo] = useState({});
 
+  // Usamos useEffect para cargar la información desde Google Sheets y actualizar la opacidad de la página
   useEffect(() => {
-    // Llama a la función cargarInfo y actualiza el estado con los datos obtenidos
     cargarInfo().then(data => setInfo(data));
+    updateOpacity(); // Aplicar la opacidad según la lógica definida
   }, []);
 
   return (
@@ -27,7 +23,9 @@ function App() {
       <Header info={info} />
       <Nav />
       <main>
+        {/* Aquí puedes agregar el contenido principal de la página */}
         <h1>Bienvenido a la Junta de Acción Comunal</h1>
+        {/* Otros componentes o contenido puede ir aquí */}
       </main>
       <Footer info={info} />
     </div>
