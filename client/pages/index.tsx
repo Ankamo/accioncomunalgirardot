@@ -4,6 +4,7 @@ import Head from '@/components/head';
 import Header from '@/components/header';
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
+import styles from '@/styles/mainIndex.module.css'; // Importa el CSS Module
 
 const HomePage: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const HomePage: React.FC = () => {
       <Head title="Inicio" />
       <Header />
       <Nav />
-      <main>
+      <main className={styles.main}>
         <h1>Inicio</h1>
         <p>Bienvenido a la página de inicio.</p>
       </main>

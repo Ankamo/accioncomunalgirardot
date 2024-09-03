@@ -11,7 +11,7 @@ const Nav: React.FC = () => {
                 <li><a href="/reuniones-y-asambleas">Reuniones y Asambleas</a></li>
                 <li><a href="/proyectos-comunales">Proyectos</a></li>
                 <li><a href="/servicios-comunales">Servicios Comunales</a></li>
-                <li><a href="/oac-afiliadas">Afiliados</a></li>
+                <li><a href="/afiliados">Afiliados</a></li>
                 <li>
                     <a href="/sobre-nosotros">Sobre Nosotros</a>
                     <ul>

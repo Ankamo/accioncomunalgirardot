@@ -8,14 +8,14 @@
   justify-content: center; /* Centra el contenido horizontalmente */
   align-items: center; /* Centra el contenido verticalmente */
   position: relative; /* Para ajustar la posición de los logos */
-  height: 100%; /* Altura del header */
+  height: auto; /* Ajusta automáticamente la altura según el contenido */
   box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total */
 }
 
 /* Contenedor central */
 .header > div:not(.logo-left):not(.logo-right) {
   text-align: center; /* Centra el texto dentro del contenedor central */
-  max-width: 600px; /* Limita el ancho del contenedor central si es necesario */
+  max-width: 600px; /* Limita el ancho del contenedor central */
 }
 
 /* Estilos para los logos */
@@ -27,11 +27,11 @@
 }
 
 .logo-left {
-  left: -150px; /* Ajusta el espacio desde el borde izquierdo */
+  left: 20px; /* Ajusta el espacio desde el borde izquierdo */
 }
 
 .logo-right {
-  right: -150px; /* Ajusta el espacio desde el borde derecho */
+  right: 20px; /* Ajusta el espacio desde el borde derecho */
 }
 
 /* Estilos para los elementos dentro del contenedor central */
@@ -43,17 +43,18 @@
 }
 
 /* Ajustes específicos para los títulos */
-.h1 {
-  font-size: 18px;
+.header h1 {
+  font-size: 20px; /* Tamaño de fuente del título */
+  margin-bottom: 0; /* Espaciado debajo del título */
 }
 
-.p {
-  font-size: 16px;
+.header p {
+  font-size: 16px; /* Tamaño de fuente del texto */
 }
 
 /* Estilos para los logos */
-.logo-left img,
-.logo-right img {
-  max-width: 90px; /* Ajusta el tamaño máximo de los logos */
-  max-height: 90px;
+.img {
+  max-width: 80px; /* Ajusta el tamaño máximo de los logos */
+  max-height: 80px;
 }
+

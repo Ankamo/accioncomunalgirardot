@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
                 <p><i className="fas fa-phone" id="footer-telefono"></i></p>
             </div>
             <div className={styles.logos}>
-                <img src="" id="footer-escudoPais" alt="Logo Footer Izquierdo" className="img-fluid" style={{ maxWidth: '80px' }} />
-                <img src="" id="footer-escudoDepto" alt="Logo Footer Centro 1" className="img-fluid" style={{ maxWidth: '80px' }} />
-                <img src="" id="footer-escudoMunicipio" alt="Logo Footer Centro 2" className="img-fluid" style={{ maxWidth: '80px' }} />
-                <img src="" id="footer-logoIvc" alt="Logo Footer Derecho" className="img-fluid" style={{ maxWidth: '80px' }} />
+                <img src="/img/escudoColombia.png" alt="Escudo Colombia" className={styles.logos}/>
+                <img src="/img/escudoDepto.png" alt="Escudo Departamento" className={styles.logos}/>
+                <img src="/img/escudoMunicipio.png" alt="Escudo Municipio" className={styles.logos}/>
+                <img src="/img/logoIvc.png" alt="Logo Entidad IVC" className={styles.logos}/>
                 <p><i className="fas fa-calendar-alt" id="footer-periodo"></i></p>
             </div>
             <div className={styles.propiedad}>

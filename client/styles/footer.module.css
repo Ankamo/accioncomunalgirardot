@@ -32,9 +32,9 @@
 }
 
 /* Estilos para las imágenes */
-.footer .img-fluid {
-  max-width: 70px;
-  max-height: 70px; /* Tamaño máximo de las imágenes */
+.footer .logos {
+  max-width: 80px;
+  max-height: 80px; /* Tamaño máximo de las imágenes */
   width: auto; /* Ajusta automáticamente el ancho */
   height: auto; /* Ajusta automáticamente la altura */
   margin: 0; /* Espaciado alrededor de las imágenes */

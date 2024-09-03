@@ -7,10 +7,10 @@
 }
 
 /* Estilos generales */
-.body {
+body {
   font-family: "Georgia", serif;
   background-color: #121212; /* Fondo oscuro */
-  color: #333; /* Texto gris claro */
+  color: #e0e0e0; /* Texto claro */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,6 +18,29 @@
   padding: 0;
 }
 
+/* Contenedor principal */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para la sección principal */
+.main {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #333; /* Corregido el color de fondo */
+}
+
+/* Estilos para el mapa */
 #map {
   height: 500px;
   width: 100%;
@@ -37,25 +60,7 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-.main {
-  width: 100%;
-  max-width: 1200px;
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* Estilos para el título */
 h1 {
   margin-bottom: 20px;
   font-size: 2em;
@@ -63,6 +68,7 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos para iframe */
 iframe {
   width: 90%;
   height: 80vh;
@@ -79,6 +85,7 @@ iframe:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilos responsivos */
 @media (max-width: 768px) {
   iframe {
       width: 95%;
