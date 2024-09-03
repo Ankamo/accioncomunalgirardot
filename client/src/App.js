@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';  // Asegúrate de que App.css contenga estilos globales si es necesario
 
 import Head from './components/Head';
 import Header from './components/Header';
