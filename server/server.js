@@ -1,13 +1,12 @@
 const express = require("express");
-const app = express();
 const cors = require("cors");
+const homeRoutes = require("./routes/home");
+
+const app = express();
 const PORT = 8080;
 
 app.use(cors());
-
-app.get("/api/home", (req, res) => {
-  res.json({ message: "Like this video!", people: ["Arpan", "Jack", "Barry"] });
-});
+app.use("/api", homeRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);

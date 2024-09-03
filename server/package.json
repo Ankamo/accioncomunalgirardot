@@ -8,7 +8,7 @@
     "start": "node server",
     "dev": "nodemon server"
   },
-  "author": "Arpan Neupane",
+  "author": "Ankamo",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
