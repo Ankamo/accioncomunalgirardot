@@ -1,0 +1,41 @@
+/* Estilos para el footer */
+.footer {
+  background-color: #1e1e1e; /* Fondo del footer */
+  color: #fff; /* Texto blanco */
+  padding: 5px; /* Espaciado interno arriba y abajo */
+  margin: 0;
+  display:flex;
+  justify-content: space-around; /* Espacio entre los items */
+  align-items: center; /* Centra los items verticalmente */
+  text-align: center; /* Centra el texto */
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total */
+}
+
+/* Estilos para las secciones dentro del footer */
+.footer .info,
+.footer .logos,
+.footer .propiedad {
+  flex: 1 1 200px; /* Ajusta el tamaño mínimo y crecimiento */
+  text-align: center;
+  margin: 0; /* Margen para separarlos */
+}
+
+/* Estilos para los íconos y texto en las secciones */
+.footer p {
+  font-size: 16px;
+  margin: 0; /* Espaciado vertical entre los párrafos */
+}
+
+.footer i {
+  font-size: 16px;
+  margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+/* Estilos para las imágenes */
+.footer .img-fluid {
+  max-width: 70px;
+  max-height: 70px; /* Tamaño máximo de las imágenes */
+  width: auto; /* Ajusta automáticamente el ancho */
+  height: auto; /* Ajusta automáticamente la altura */
+  margin: 0; /* Espaciado alrededor de las imágenes */
+}
