@@ -1,33 +1,37 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
-function index() {
-
-  const [message, setMessage] = useState("Loading")
+function Index() {
+  const [message, setMessage] = useState("Loading");
   const [people, setPeople] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/home").then(
-      response => response.json()
-    ).then(
-      data => {
-        setMessage(data.message)
-        setPeople(data.people)
-      }
-    )
-  }, [])
+    fetch("http://localhost:8080/api/home")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then(data => {
+        setMessage(data.message);
+        setPeople(data.people);
+      })
+      .catch(error => {
+        setMessage("Failed to load data");
+        console.error("There was a problem with the fetch operation:", error);
+      });
+  }, []);
 
   return (
     <div>
       <div>{message}</div>
-      {
-        people.map((person, index) => (
-          <div key={index}>
-            {person}
-          </div>
-        ))
-      }
+      {people.map((person, index) => (
+        <div key={index}>
+          {person}
+        </div>
+      ))}
     </div>
-  )
+  );
 }
 
-export default index
+export default Index;
