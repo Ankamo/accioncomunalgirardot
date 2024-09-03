@@ -1,7 +1,7 @@
 export const updateOpacity = () => {
     /* Configuración */
-    const dueDate = new Date('2024-09-30'); // Fecha de vencimiento
-    const daysBeforeOpacity = 10; // Días antes de la fecha de vencimiento para comenzar a opacar
+    const dueDate = new Date('2024-12-31'); // Fecha de vencimiento
+    const daysBeforeOpacity = 30; // Días antes de la fecha de vencimiento para comenzar a opacar
     /* Fin de la configuración */
 
     const currentDate = new Date();
