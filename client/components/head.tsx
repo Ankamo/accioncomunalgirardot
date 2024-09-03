@@ -1,11 +1,14 @@
 import React from 'react';
-import '../styles/head.module.css';
+import NextHead from 'next/head';
 
-const Head: React.FC = () => {
+const Head: React.FC<{ title?: string }> = ({ title }) => {
     return (
-        <head>
-            
-        </head>
+        <NextHead>
+            <title>{title ? title : 'Default Title'}</title>
+            <meta name="description" content="Your site description here" />
+            <meta charSet="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </NextHead>
     );
 };
 

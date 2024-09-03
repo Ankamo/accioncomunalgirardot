@@ -1,23 +1,23 @@
-// pages/index.tsx
+// pages/sobre-nosotros.tsx
 import React from 'react';
 import Head from '@/components/head';
 import Header from '@/components/header';
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
 
-const HomePage: React.FC = () => {
+const SobreNosotros: React.FC = () => {
   return (
     <div>
-      <Head title="Inicio" />
+      <Head title="Sobre Nosotros" />
       <Header />
       <Nav />
       <main>
-        <h1>Inicio</h1>
-        <p>Bienvenido a la página de inicio.</p>
+        <h1>Sobre Nosotros</h1>
+        <p>Información sobre la organización.</p>
       </main>
       <Footer />
     </div>
   );
 };
 
-export default HomePage;
+export default SobreNosotros;
