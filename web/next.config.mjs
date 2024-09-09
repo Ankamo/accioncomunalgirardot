@@ -1,6 +1,4 @@
-import { defineConfig } from 'next';
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
 
-export default defineConfig({
-    reactStrictMode: true,
-    swcMinify: true,
-});
+export default nextConfig;
