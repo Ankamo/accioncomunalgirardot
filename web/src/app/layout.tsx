@@ -1,6 +1,6 @@
-import './globals.css';
+import '../styles/globals.css';
 import { ReactNode } from 'react';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/navbar';
 
 export const metadata = {
   title: 'Junta de Acción Comunal',
