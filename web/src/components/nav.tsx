@@ -1,19 +1,25 @@
 import Link from 'next/link';
-import styles from '../styles/nav.modules.css'; // Importa el CSS Module
+import styles from '../styles/nav.module.css';  // Importa el CSS Module
 
 const Nav = () => {
     return (
         <nav className={styles.nav}>
-            <ul className={styles.navList}>
-                <li className={styles.navItem}><Link href="/" className={styles.navLink}>Inicio</Link></li>
-                <li className={styles.navItem}><Link href="/cartelera" className={styles.navLink}>Cartelera</Link></li>
-                <li className={styles.navItem}><Link href="/eventos-y-actividades" className={styles.navLink}>Eventos y Actividades</Link></li>
-                <li className={styles.navItem}><Link href="/reuniones-y-asambleas" className={styles.navLink}>Reuniones</Link></li>
-                <li className={styles.navItem}><Link href="/proyectos" className={styles.navLink}>Proyectos</Link></li>
-                <li className={styles.navItem}><Link href="/servicios-comunales" className={styles.navLink}>Servicios Comunales</Link></li>
-                <li className={styles.navItem}><Link href="/quienes-somos" className={styles.navLink}>Quiénes Somos</Link></li>
-                <li className={styles.navItem}><Link href="/login" className={styles.navLink}>Login</Link></li>
-                <li className={styles.navItem}><Link href="/quiero-afiliarme" className={styles.navLink}>Quiero Afiliarme</Link></li>
+            <ul>
+                <li><Link href="/">Inicio</Link></li>
+                <li><Link href="/cartelera-comunal">Cartelera Comunal</Link></li>
+                <li><Link href="/eventos-y-actividades">Eventos y Actividades</Link></li>
+                <li><Link href="/reuniones-y-asambleas">Reuniones y Asambleas</Link></li>
+                <li><Link href="/proyectos-comunales">Proyectos</Link></li>
+                <li><Link href="/servicios-comunales">Servicios Comunales</Link></li>
+                <li><Link href="/afiliados">Afiliados</Link></li>
+                <li>
+                    <Link href="/sobre-nosotros">Sobre Nosotros</Link>
+                    <ul>
+                        <li><Link href="#">Ubicación</Link></li>
+                        <li><Link href="#">Documentación Legal</Link></li>
+                    </ul>
+                </li>
+                <li><Link href="/ingresar">Ingresar</Link></li>
             </ul>
         </nav>
     );

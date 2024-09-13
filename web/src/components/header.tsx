@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import Image from 'next/image'; // Importa next/image
 import styles from '../styles/header.module.css';  // Importa el CSS Module
 
 const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.logoLeft}>
-                <Image src="/img/rosa-blanca.png" alt="Logo Izquierdo" width={150} height={50} className={styles.img} />
+                <img src="/img/rosa-blanca.png" alt="Logo Izquierdo" className={styles.img} />
             </div>
             <div className={styles.contentCenter}>
                 <h1 className={styles.title}>Junta de Acción Comunal del Barrio de Rosa Blanca de Girardot</h1>
@@ -16,7 +16,7 @@ const Header = () => {
                 <p className={styles.text}>Girardot, Cundinamarca</p>
             </div>
             <div className={styles.logoRight}>
-                <Image src="/img/accionComunal.png" alt="Logo Derecho" width={150} height={50} className={styles.img} />
+                <img src="/img/accionComunal.png" alt="Logo Derecho" className={styles.img} />
             </div>
         </header>
     );
