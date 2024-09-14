@@ -1,5 +1,7 @@
-import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt, faHome, faEnvelope, faPhone, faCalendarAlt, faLaptopCode } from '@fortawesome/free-solid-svg-icons';  // Importa los iconos
 import styles from '../styles/nav.module.css';  // Importa el CSS Module
+import Link from 'next/link';
 
 const Nav = () => {
     return (

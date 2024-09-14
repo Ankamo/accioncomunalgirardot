@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos generales para la página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+.html, .body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #121212; /* Fondo oscuro para el cuerpo */
+  color: #e0e0e0; /* Texto claro para buena legibilidad */
+  }
+  
+  /* Configuraciones básicas para el body y el main */
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #121212;
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos la pantalla completa */
+  }
+  
+  main {
+    flex-grow: 1; /* Permite que el contenido principal crezca según sea necesario */
+    padding: 20px;
+    background-color: #181818; /* Fondo ligeramente más claro para diferenciar del body */
+    color: #e0e0e0; /* Texto claro para contraste */
+  }
+  
+  /* Estilo global para los enlaces */
+  a {
+    color: #1db954; /* Verde moderno para los enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #1ed760; /* Efecto hover en verde más claro */
+  }
+  
+  /* Botones generales */
+  button {
+    background-color: #1db954;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1ed760; /* Cambio de color en hover */
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #1db954; /* Sombra en el enfoque */
+  }
+  
+  /* Estilo general para las imágenes */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px; /* Bordes redondeados sutiles */
+  }
+  
+  /* Titulares elegantes */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #f0f0f0; /* Texto ligeramente más claro para los titulares */
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilos para las listas */
+  ul {
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Formularios */
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #1db954;
+    outline: none;
+    box-shadow: 0 0 5px #1db954;
+  }
+  

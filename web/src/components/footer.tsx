@@ -1,4 +1,5 @@
-import Image from 'next/image'; // Importa next/image
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt, faHome, faEnvelope, faPhone, faCalendarAlt, faLaptopCode } from '@fortawesome/free-solid-svg-icons';  // Importa los iconos
 import styles from '../styles/footer.module.css';  // Importa el CSS Module
 
 const Footer = () => {
